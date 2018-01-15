@@ -16,7 +16,7 @@
 
     <bean id="demo_ds_0" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-        <property name="url" value="jdbc:oracle:thin:@10.211.55.4:1521:orcl"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
         <property name="username" value="easy"/>
         <property name="password" value="easy"/>
         <property name="maxActive" value="50"/>
@@ -24,9 +24,9 @@
 
     <bean id="demo_ds_1" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
-        <property name="url" value="jdbc:oracle:thin:@10.211.55.4:1521:orcl"/>
-        <property name="username" value="eadt1"/>
-        <property name="password" value="eadt1"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+        <property name="username" value="eadt"/>
+        <property name="password" value="eadt"/>
         <property name="maxActive" value="50"/>
     </bean>
     <sharding:standard-strategy id="databaseShardingStrategy" sharding-column="user_id" precise-algorithm-class="io.shardingjdbc.example.spring.namespace.mybatis.algorithm.PreciseModuloDatabaseShardingAlgorithm"/>
